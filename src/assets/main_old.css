@@ -1,11 +1,4 @@
 @import "./base.css";
-@import "./style.css";
-
-img {
-  animation: rotation 2s linear infinite;
-}
-
-
 
 #app {
   max-width: 1280px;
