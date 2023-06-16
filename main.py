@@ -1,17 +1,18 @@
 import asyncio
-import websockets
 import random
 import time
-x = ["1", "2", "", "3", "4", "5"]
-async def handle_connection(websocket, path):
+x = ["1", "2", "nyhha", "3", "4hgas", "5dasdas"]
+
+from websockets.server import serve
+
+async def echo(websocket):
     while True:
         l = random.choice(x)
-        print(l)
         await websocket.send(l)
         time.sleep(1)
-async def start_server():
-    async with websockets.serve(handle_connection, "localhost", 8000):
-        print("WebSocket server started")
-        await asyncio.Future()
 
-asyncio.run(start_server())
+async def main():
+    async with serve(echo, "0.0.0.0", 8000):
+        await asyncio.Future()  # run forever
+
+asyncio.run(main())
