@@ -1,4 +1,4 @@
-# test
+# Vue.js Dynanicly update trxt using websocket
 
 ## Project setup
 ```
