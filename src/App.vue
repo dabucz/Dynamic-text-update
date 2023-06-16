@@ -1,7 +1,7 @@
 <script setup>
-import NukeOverlay from './components/NukeOverlay.vue'
+import TextOverlay from './components/TextOverlay.vue'
 </script>
 
 <template>
-  <component v-bind:is=NukeOverlay />
+  <component v-bind:is=TextOverlay />
 </template>
